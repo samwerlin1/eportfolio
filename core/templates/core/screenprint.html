@@ -10,7 +10,7 @@
 
         <title>Screenprint Project | Sam Werlin</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
 <link rel="icon" type="image/x-icon" href="{% static 'core/favicon.ico' %}">
 
     </head>
@@ -22,8 +22,8 @@
 
 <ul>
 
-<a href="https://esumsnh.net/">About Me</a> |
-<a href="blackbox.html">The Blackbox</a>
+<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
+<a href="blackbox">The Blackbox</a>
 </ul>
 </nav>
 
@@ -46,7 +46,7 @@
 	<p>To start our screenprints, we took pictures of ourselves for our design. We each got to take 3 pictures to choose from for our design. We also controlled the shot type, blur, shutter, depth and other elements to make sure that our picture was the best possible for our planned design. I used a close up shot on my hand with a 1/500 shutter and a F4.0 aperture. After I took the photo, I opened Adobe Photoshop. To start creating our design in photoshop, the first step was to separate every single excruciating detail into separate layers. I had several layers, between the specific parts for the photo that was taken of me (including the brighter and darker parts of my hand), the words present, and the guitar that would be shown. My filters were meant to separate everything into two distinct colors and make my hand look all one shade. After many layers and filters were used, I finally got something near to my planned design.</p>
 
 <!--Pictures Here-->
-<figure><img src="{% static 'core/2_HandsOG.JPG"alt="original design photo">
+<figure><img src="{% static 'core/2_HandsOG.JPG' %}" alt="original design photo">
 <figcaption>Original Picture</figcaption>
 </figure>
 
@@ -84,7 +84,7 @@ alt="diagram image"></div>
   <div><img src="{% static 'core/11_Creating_Diagram.JPG' %}"
 alt="diagram image"></div>
 </div>
-  <img src="{% static 'core/10_guide.png' %}"
+  <img src="{% static 'core/10_Guide.png' %}"
 alt="diagram image">
 
 	<p>I had finally finished all of the designing and planning necessary to make the screenprints. To start building the prints, we took long pieces of wood that would be used to build the print’s frame. I measured out four pieces of wood per frame with a 45 degree angle on each end. All of my wood pieces were the same size, so I cut out 8 equally sized pieces of wood for the two different print layers. To cut the pieces, I used a power saw to cut at 45 degree angles. Next, I glued my print frame pieces together. It was a two person job– I glued the wood together and held them in place while a partner stapled the pieces so they could sit and solidify. The next class, I stretched screens onto the frames and stapled those on very tightly. Now I had the main pieces of the screenprint ready. It was time to add the designs. I printed out vinyl stickers of our layers in a cutting tool and poked out the pieces that I wanted paint to go through. I then put the vinyl pieces onto the inside of our frames and ironed them into the screen, so that everything became connected. I also taped the sides and surroundings of the print so that the paint did not leak out outside where the stencil allowed it to. Finally, the screenprint was finished and I could begin printing my design. To print the design, we had to mix a paint color and put it on one end of the frame, press firmly onto the page, and then use a tool to press/slide the paint across the stencil. Then, all we could do was hope for the best result– our intended design.</p>
@@ -115,7 +115,7 @@ alt="printing vinyl"></div>
 alt="stencil"></div>
 
   <div><img src="{% static 'core/19_BeforeIron.JPG' %}"
-alt="{% static 'core/before ironing"></div>
+alt="before ironing"></div>
 
   <div><img src="{% static 'core/20_Irons.JPG' %}"
 alt="ironing"></div>
