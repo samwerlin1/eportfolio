@@ -1,0 +1,136 @@
+{% load static %}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+table, th, td {
+    border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: middle;
+}
+tr:hover {background-color: #d18efa;}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d18efa;
+  width: 750px;
+}
+.flex-container > div {
+  background-color: #ccccff;
+  width: 47.3%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-container img {
+	width: 100%;
+}
+
+.flex-container #pic1 {
+	width: 47.3%;
+}
+
+
+
+#qrcode {
+	width: 200px;
+}
+
+h1 {
+	color: #000066;
+	font-family: Bebas Neue;
+	text-shadow:0 0 10px #009999;
+
+
+}
+
+h2 {
+	color: #000066;
+	font-family: Bebas Neue;
+	text-shadow:0 0 10px #009999;
+}
+
+h3 {
+	color: #000066;
+	font-family: Bebas Neue;
+	text-shadow:0 0 10px #009999;
+}
+
+p {
+	color: #009999;
+	font-family: Playfair Display
+
+}
+
+figcaption {
+	color: #009999;
+	font-family: Playfair Display;
+	margin: auto;
+	background-color: #d18efa;
+	text-align: center;
+
+}
+
+body {
+ 	background-color: #ccccff;
+	max-width: 750px;
+	margin: auto;
+
+
+}
+
+img {
+	width: 65%;
+	margin: auto;
+	display: block;
+	border-radius: 10px;
+}
+
+video {
+	width: 65%;
+	margin: auto;
+	display: block;
+}
+
+table, th, td {
+  	color: #000066
+	margin: auto;
+}
+
+#tableone {
+	color: #000066
+}
+
+#tabletwo {
+	color: #000066
+}
+
+#fig1 {
+	color: #000066
+}
+
+#fig2 {
+	color: #000066
+}
+
+nav {
+  display: block;
+  color: #000066;
+	font-family: Bebas Neue;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,223 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Black Box | Sam Werlin</title>
+<link rel="icon" type="image/x-icon" href="{% static 'core/favicon1.ico' %}">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+</style>
+
+
+  </head>
+  <body>
+
+
+
+<nav>
+
+<ul>
+
+<a href="https://esumsnh.net/">About Me</a> |
+<a href="screenprint.html">Screenprint Project</a>
+</ul>
+</nav>
+
+
+
+
+
+
+
+<h1>The Black Box Investigation</h1>
+<h2>By Sam Werlin</h2>
+<h3>Background:</h3>
+<p>In our New Media and Tech class, we learned about the Mystery Black Box. The Mystery Black Box is a box that pours different amounts of water out of it randomly, when water is poured in. Our goal is to make a working design of what machine is in the box that makes the random amounts of water come out, and build a prototype model to test whether our design works.</p>
+<h3>Claim:</h3>
+<p>The Mystery Black Box probably does not use a fixed tube that connects a piece and a spout.</p>
+
+<h3>Building the Model</h3>
+<div class="flex-container">
+  <div><img src="{% static 'core/Hot_Glue.JPG' %}"
+alt="image of building of black box model"></div>
+  <div><img src="{% static 'core/Model_Building1.JPG' %}"
+alt="image of building of black box model"></div>
+  <div><img src="{% static 'core/Model_Building2.JPG' %}"
+alt="image of building of black box model"></div>
+  <div><img src="{% static 'core/Box1.JPG' %}"
+alt="image of building of black box model"></div>
+  <img id="pic1" src="{% static 'core/Model_Building3.JPG' %}"
+alt="image of building of black box model">
+</div>
+
+<h3>Evidence:</h3>
+<p>	The point of our black box model was to figure out a good representation of how the actual black box managed to send out random amounts of water, no matter the input amount. After doing multiple tests on the actual Black Box, we found that it had a variation of output water levels, all different to those of the input water amounts (see Table 1 for reference). We originally believed the design to be that of Figure 1, but during the building process we found that our original design was impossible with the given materials and we ended up creating a prototype that was closer to Figure 2.</p>
+<p>After building our prototype model, we tested whether or not our design was accurate by pouring different amounts of water in and seeing how much water came out. We noticed though that there were several badly patched holes in our model that were letting water leak out onto the cardboard box. After some patching, we were able to make some water come out, but the number was much lower than the amount poured in (see Table 2 for reference). We also noticed that even when the water did stay in the box, the water would not go below the tube line so about the same amount as the input water came out in the test.</p>
+
+<h3>Interacting With the Original Blackbox</h3>
+
+<div class="flex-container">
+  <div><img src="{% static 'core/test1.JPG' %}"
+alt="image of testing of black box model"></div>
+  <div><img src="{% static 'core/test2.JPG' %}"
+alt="image of testing of black box model"></div>
+</div>
+
+<h3>Reasoning:</h3>
+<p>	Design 1 (Figure 1) involved a divider that added more water into one side and added less water into a second container that was the output amount. The original idea was supposed to have some way that the spring forced a trapdoor down, allowing water to get out on that side but not the other. Unfortunately, that part of the design process was not flushed out by the time we had started building, so since we did not have a full idea for how the design worked, our design was rendered useless.</p>
+<p>	We had to find a new way for the water in the two compartments to make it to the spout, so we came up with a final design closer to Figure 2. In this design, the two containers had a fixed tube each that sent the water into a final box with the spout once it reached the right level. We also added that the two containers were connected to a single stick that revolved, allowing the heavier container to go down and the lighter one to go up, allowing more water into the container with less in it. None of this mattered though, because although the box could hold a lot of water, only a fixed amount could leave the box at a time once all of the containers filled up as far as they could without any water coming out.</p>
+<p>	My claim is that the Black Box most likely does not use a fixed tube. I say this because our prototype model did use a fixed tube and the tests did not match up at all in comparison to the actual black box. Yes, the model ended up having a few errors in the way of the build (it had holes and soaked the box), but when it did work, a similarly small amount of water came out at a time. I believe this is due to the fixed tube that didn’t let water out below the tube opening.</p>
+<p>	This fact doesn’t allow for a high amount of variability between tests, but a high amount of variability is shown in the actual black box. In the real box, there can be any number from 0 mL, to 700 mL, to 2200 mL, so a fixed tube just is not possible. If the prototype model had another way of transporting the water from the buckets into the spout-container, the difference between tests would be a lot larger, and a higher amount of water would probably come out.</p>
+<p>	If the Mystery Black Box did have a fixed tube stationed between the middle section and the spout, there would be a much lower difference in the amount that came out of the box, and the number that came out would be much more similar to the amount that was originally poured in, as seen in the Table 2 data.</p>
+
+<h3>Rendered Images</h3>
+
+<div class="flex-container">
+  <div><img src="{% static 'core/blackbox_photo1.png' %}"
+alt="rendered 3d image of blackbox model"></div>
+  <div><img src="{% static 'core/blackbox_photo2.png' %}"
+alt="rendered 3d image of blackbox model"></div>
+  <div><img src="{% static 'core/blackbox_photo3.png' %}"
+alt="rendered 3d image of blackbox model"></div>
+  <div><img src="{% static 'core/blackbox_photo4.png' %}"
+alt="rendered 3d image of blackbox model"></div>
+</div>
+
+
+<h3>3D Modeling, Animation, and Augmented Reality</h3>
+<p> After doing physical tests and building our model of the Mystery Black Box, we turned toward the computer. We started by using the Maya program to model our black box digitally, where we used extrude, bevel, and other shape change tools to turn basic shaped into the different parts of a working box. Images of the model can be seen rendered above. We then used the animate tool to animate the black box working as we believe the actual box does. Finally, we took a file of the animation and put it into a program called merge.edu that can render the animation in augmented reality. A video of the program being used is below, as well as a link to try it out for yourself.</p>
+
+<h3>Exclusive Blackbox Video in Augmented Reality</h3>
+<a href="https://objects.mergeedu.com/link/LVWP48" target="_blank">If you would like to interact with the black box model in augmented reality, click this link! </a>
+<p></p>
+<img id="qrcode" src="{% static 'core/mergeqr.png' %}"
+alt="mergeedu QR code">
+
+<video width="320" height="400" autoplay muted loop>
+  <source src="blackboxaugmented.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+</video>
+
+<h3>Personal Reflection</h3>
+<p> I think that I was able to contribute a good amount to my team. When we were making a design for the box and building it physically, I built most of the box. I also helped come up with both the original and final design for the model (see figures one and two below). Online, I learned how to model using Maya, despite how hard and frustrating I found it. I quite enjoyed and animating the box model and building this website. I would say that those two things went particularly well (though merge.edu is a pain). If I were to do this project a second time, I would want to create a more solid design for the black box model so the building process could go more smoothly. Overall, I had a lot of fun with this project and would be happy to do more animating, 3D designing, and coding in the future.</p>
+
+<h3>Tables and Figures</h3>
+<p id="tableone">Table 1 - The Mystery Black Box Tests</p>
+<table style="width:70%">
+  <tr>
+    <th>Test</th>
+    <th>Amount Poured Into Box</th>
+    <th>Amount That Came Out</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1000 mL</td>
+    <td>0 mL</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1000 mL</td>
+    <td>2200 mL</td>
+  </tr>
+ <tr>
+    <td>3</td>
+    <td>1000 mL</td>
+    <td>530 mL</td>
+  </tr>
+ <tr>
+    <td>4</td>
+    <td>1000 mL</td>
+    <td>1500 mL</td>
+  </tr>
+ <tr>
+    <td>5</td>
+    <td>1000 mL</td>
+    <td>700 mL</td>
+  </tr>
+ <tr>
+    <td>6</td>
+    <td>2000 mL</td>
+    <td>237 mL</td>
+  </tr>
+ <tr>
+    <td>7</td>
+    <td>600 mL</td>
+    <td>300 mL</td>
+  </tr>
+
+</table>
+
+<p id="tabletwo">Table 2 - Blue Team Prototype Box Tests</p>
+<table style="width:70%">
+  <tr>
+    <th>Test</th>
+    <th>Amount Poured Into Box</th>
+    <th>Amount That Came Out</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>100 mL</td>
+    <td>0 mL</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>500 mL</td>
+    <td>0 mL</td>
+  </tr>
+ <tr>
+    <td>3</td>
+    <td>300 mL</td>
+    <td>0 mL</td>
+  </tr>
+ <tr>
+    <td>4</td>
+    <td>200 mL</td>
+    <td>40 mL</td>
+  </tr>
+ <tr>
+    <td>5</td>
+    <td>90 mL</td>
+    <td>0 mL</td>
+  </tr>
+ <tr>
+    <td>6</td>
+    <td>100 mL</td>
+    <td>0 mL</td>
+  </tr>
+ <tr>
+    <td>7</td>
+    <td>100 mL</td>
+    <td>90 mL</td>
+  </tr>
+
+</table>
+
+<p></p>
+
+<p id="fig1">Figure 1 - Initial blackbox model</p>
+<img src="{% static 'core/figure1.JPG' %}"
+alt="initial blackbox model"
+width=250>
+<p id="fig2">Figure 2 - Final blackbox model</p>
+<img src="{% static 'core/figure2.JPG' %}"
+alt="final blackbox model"
+width=250>
+
+
+<h3>The Blackbox Investigation: 21st Century Skills</h3>
+<p>During the Blackbox Investigation, I developed my Community and Collaboration skills, which happens to be a 21st Century Competency. By doing this project, I learned how to communicate effectively, as well as work productively with others through the physical step. We had to communicate well to make a working prototype, and at first the building was rough, but after managing to talk through our problems, my group was able to create a plan. This plan brought my group and I together to the point where we were able to work productively and create a model, which although did not fully work, still was a large achievement that highlighted our communication and problem solving skills as a team. I also demonstrated being able to articulate and explain ideas through models to audiences. This was through explaining my plan for the blackbox model to both my team and my class that showed how our prototype would work.
+</p>
+
+  </body>
+</html>
+
+
