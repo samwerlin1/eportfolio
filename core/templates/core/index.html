@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--
+    Anything you put in between the double-dash arrow symbols shown around
+    this block of text is designated a 'comment' intended for human coders
+    and ignored by the computer. The top "<!DOCTYPE html>" line of code
+    declares that this text file is to be interpreted as HTML code.
+-->
+
+<html lang=en>
+<!--
+    This opening tag marks the start of the html code.  Everything below
+    until the </html> closing tag is part of this element. "lang" is an
+    attribute defining the language of the website. The value "en"
+    indicates this site is written in English. We indent the content
+    inside an element to make it easier for people to read and understand.
+-->
+
+    <head>
+    <!--Code about the website NOT displayed in the browser window.-->
+
+        <meta charset="UTF-8"> <!--Sets site to use standard characters.-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Sizes your site to the visitor's screen size -->
+
+        <meta name="author" content="Sam Werlin">
+        <!--
+            Some tags like "meta" are self-closing. They have "attributes"
+            but no inner content and they don't need or use a closing tag.
+        -->
+
+        <title>About Me | Sam Werlin</title>
+        <!--The 'title' is what's displayed in the browser tab.-->
+        <link rel="icon" type="image/x-icon" href="{% static 'core/favicon2.ico' %}">
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+        <!--
+            HTML (HyperText Markup Language) code is for the website
+            content. CSS (Cascading Style Sheets) code is for the website
+            style. The line above tells the browser the file location and
+            file name to find this code that you'll write/edit there.
+        -->
+
+
+    </head>
+
+    <body> <!--Everything to be displayed in the browser window.-->
+
+
+<nav>
+
+<ul>
+
+<a href="blackbox">The Blackbox</a> |
+<a href="screenprint">Screenprint Project</a>
+</ul>
+</nav>
+
+
+
+        <h1>About Me</h1>
+	<p>My name is Sam Werlin and I live in New Haven, Connecticut. I am a ninth grader at Engineering and Science University Magnet School, or ESUMS for short. At school, I am interested the most in science and social studies class. Biology is very captivating, but I also love learning about past and current events. I find history to be a very interesting field. For fun, I run in cross country and track, and I play guitar with multiple bands. When I am not doing either of those things, I am often reading. I read a lot of science fiction and fantasy but I enjoy reading historical fiction books too. I also learn French on a language learning app, called Duolingo. On Duolingo, I have been learning the language for almost three years, and I have progressed very far into the curriculum. Along with my AP Biology and Band class, French is also one of my favorite subjects. I am proud that I got into AP Biology this year, since not many students get into the class in freshman year, and so far I have found the class very interesting. I have also gotten high honors with distinction in my school grades for four years in a row, showing my dedication to learning. Outside of school, I have made achievements through running a lot of personal records in my track meets, showing my over the seasons.</p>
+	<p>I have many goals for the future, in addition to my achievements. I would like to improve my guitar skill, as well as increase my speed and endurance in running. I also am aiming to get  above a three on my AP Exam at the end of the school year; however, the goal I am working toward the most is deciding the area of study I would like to pursue when I graduate.</p>
+
+    </body>
+</html>
