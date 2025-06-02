@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+    Anything you put in between the double-dash arrow symbols shown around
+    this block of text is designated a 'comment' intended for human coders
+    and ignored by the computer. The top "<!DOCTYPE html>" line of code
+    declares that this text file is to be interpreted as HTML code.
+-->
+
+<html lang=en>
+<!--
+    This opening tag marks the start of the html code.  Everything below
+    until the </html> closing tag is part of this element. "lang" is an
+    attribute defining the language of the website. The value "en"
+    indicates this site is written in English. We indent the content
+    inside an element to make it easier for people to read and understand.
+-->
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Sam Werlin">
+
+        <title>Screenprint Project | Sam Werlin</title>
+
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
+    </head>
+
+    <body>
+
+
+
+<nav>
+
+<ul>
+<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
+<a href="blackbox">The Blackbox</a> |
+<a href="screenprint">Screenprint Project</a> |
+<a href="biograph">Augmented Biography</a> |
+<a href="music">Contemporary Band</a>
+</ul>
+</nav>
+
+
+
+        <h1>Biotechnology Unit</h1>
+	<h2>Sam Werlin</h2>
+
+	<h3>Introduction</h3>
+	<p>In New Media and Tech class we studied genetic diversity throughout our grade by using PCR and Gel Electrophoresis tests. The goal was to separate a section from our DNA that repeats a variable amount of times and compare its length with other people in the class. We also were trying to see trends in why we might have similar sized sections. Using the data we collected, I can conclude that race is not biologically real.</p>
+
+ <!-- Image 1 -->
+
+	<h3>What is Race?</h3>
+	<p>Race is the prospect that there are different categories of people biologically, and people who have a certain physical trait (such as skin color) have more similar DNA with each other than people of a different trait. In short, race is the idea that having one trait in common likely means that people will have many other traits in common with each other.</p>
+
+	<h3>PCR Test</h3>
+	<p>To begin, we extracted our DNA so we could actually test it, which was done by using a small stick to pull cells off of the inside of our mouths. After swabbing the cells from our cheeks, we mixed it with a buffer solution in separate small vials. We then incubated our solution at 95 degrees Celsius in order to break open the cells and release the DNA into the open. We had completed the first step.</p>
+
+ <!-- Image 2-5 -->
+
+	<p>Immediately after our solution had finished, we prepared it for the Polymerase Chain Reaction, or PCR for short. PCR is an experiment in which DNA is split apart and a specific section is copied a certain amount of times. We began by preparing the PCR solution, which consists of a “master mix,” a primer, and the DNA solution from before. The “master mix” is the same necessary solution in every single PCR test. It consists of the polymerase, or the DNA builder, and the Nitrogenous bases, which are the building blocks of the DNA code. The primer is a little more variable. It is the beginning of the section that is copied, meant to get the polymerase started as it copies the DNA. Our primer matched the section of DNA we were trying to copy. To combine these three ingredients, we used micropipettes and put them all into a little PCR vial. After mixing our separate vial with itself, we placed it into a PCR machine. It had three steps; first, the DNA denatured, or broke in half, so that it could be easily accessed. Second, in annealing, the primer bonded to the specific section; finally, in extension, the polymerase jumped onto the primer to copy the section. These steps were repeated in the PCR about 30 times, which turned one section into roughly one billion sections.</p>
+
+	<h3>Gel Electrophoresis</h3>
+	<p>A few days later, the PCR was finished, and it was time for gel electrophoresis. Gel electrophoresis is a method of separating differently sized molecules to see physically; in this case, we were viewing DNA. The DNA section we viewed is known as a Variable Number Tandem Repeat (VNTR) region. VNTRs are regions within DNA that contain repeated short stretches of DNA. This VNTR region is highly variable in how long it is, so we were trying to compare the sizes between our DNA using gel electrophoresis.</p>
+	<p>The method begins by creating a gel; the gel is made with water and agarose tablets that are dissolved into a solution. The solution is then heated and stirred repeatedly and set to solidify in the buffer chamber. After we prepared our gel, we let it solidify for roughly ten minutes and prepared to load the DNA samples by pouring the buffer and connecting the free electrode wires to the chamber. We also had a ladder that was loaded into the first well. A ladder is a sort of control for the DNA samples because it has many different sized DNA molecules that move different distances down the gel. If the ladder does not work, it means there is something wrong with how the gel was set up. Finally we could load our own DNA into the different wells, using a different pipette tip for each sample we loaded. Afterwards, we left for break and waited for the sample results to arrive.</p>
+
+    </body>
+</html>
