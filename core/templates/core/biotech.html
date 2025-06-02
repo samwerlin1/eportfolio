@@ -17,21 +17,36 @@
 -->
 
     <head>
-        <meta charset="UTF-8">
+    <!--Code about the website NOT displayed in the browser window.-->
+
+        <meta charset="UTF-8"> <!--Sets site to use standard characters.-->
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Sizes your site to the visitor's screen size -->
 
         <meta name="author" content="Sam Werlin">
+        <!--
+            Some tags like "meta" are self-closing. They have "attributes"
+            but no inner content and they don't need or use a closing tag.
+        -->
 
-        <title>Screenprint Project | Sam Werlin</title>
-
-        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+        <title>Biotechnology | Sam Werlin</title>
+        <!--The 'title' is what's displayed in the browser tab.-->
         <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
         <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
+
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+        <!--
+            HTML (HyperText Markup Language) code is for the website
+            content. CSS (Cascading Style Sheets) code is for the website
+            style. The line above tells the browser the file location and
+            file name to find this code that you'll write/edit there.
+        -->
+
+
     </head>
 
-    <body>
-
+    <body> <!--Everything to be displayed in the browser window.-->
 
 
 <nav>
@@ -48,12 +63,14 @@
 
 
         <h1>Biotechnology Unit</h1>
-	<h2>Sam Werlin</h2>
+	<h2>By Sam Werlin</h2>
 
 	<h3>Introduction</h3>
 	<p>In New Media and Tech class we studied genetic diversity throughout our grade by using PCR and Gel Electrophoresis tests. The goal was to separate a section from our DNA that repeats a variable amount of times and compare its length with other people in the class. We also were trying to see trends in why we might have similar sized sections. Using the data we collected, I can conclude that race is not biologically real.</p>
 
- <!-- Image 1 -->
+   <figure>
+  <img src="{% static 'core/image1.png' %}" alt="beaker">
+</figure>
 
 	<h3>What is Race?</h3>
 	<p>Race is the prospect that there are different categories of people biologically, and people who have a certain physical trait (such as skin color) have more similar DNA with each other than people of a different trait. In short, race is the idea that having one trait in common likely means that people will have many other traits in common with each other.</p>
@@ -62,12 +79,72 @@
 	<p>To begin, we extracted our DNA so we could actually test it, which was done by using a small stick to pull cells off of the inside of our mouths. After swabbing the cells from our cheeks, we mixed it with a buffer solution in separate small vials. We then incubated our solution at 95 degrees Celsius in order to break open the cells and release the DNA into the open. We had completed the first step.</p>
 
  <!-- Image 2-5 -->
+ <figure><div class="flex-container">
+  <div><img src="{% static 'core/image2.png' %}"
+alt="PCR"></div>
+
+  <div><img src="{% static 'core/image3.png' %}"
+alt="PCR"></div>
+
+  <div><img src="{% static 'core/image4.png' %}"
+alt="PCR"></div>
+
+  <div><img src="{% static 'core/image5.png' %}"
+alt="PCR"></div>
+</div>
+</figure>
+
 
 	<p>Immediately after our solution had finished, we prepared it for the Polymerase Chain Reaction, or PCR for short. PCR is an experiment in which DNA is split apart and a specific section is copied a certain amount of times. We began by preparing the PCR solution, which consists of a “master mix,” a primer, and the DNA solution from before. The “master mix” is the same necessary solution in every single PCR test. It consists of the polymerase, or the DNA builder, and the Nitrogenous bases, which are the building blocks of the DNA code. The primer is a little more variable. It is the beginning of the section that is copied, meant to get the polymerase started as it copies the DNA. Our primer matched the section of DNA we were trying to copy. To combine these three ingredients, we used micropipettes and put them all into a little PCR vial. After mixing our separate vial with itself, we placed it into a PCR machine. It had three steps; first, the DNA denatured, or broke in half, so that it could be easily accessed. Second, in annealing, the primer bonded to the specific section; finally, in extension, the polymerase jumped onto the primer to copy the section. These steps were repeated in the PCR about 30 times, which turned one section into roughly one billion sections.</p>
 
 	<h3>Gel Electrophoresis</h3>
 	<p>A few days later, the PCR was finished, and it was time for gel electrophoresis. Gel electrophoresis is a method of separating differently sized molecules to see physically; in this case, we were viewing DNA. The DNA section we viewed is known as a Variable Number Tandem Repeat (VNTR) region. VNTRs are regions within DNA that contain repeated short stretches of DNA. This VNTR region is highly variable in how long it is, so we were trying to compare the sizes between our DNA using gel electrophoresis.</p>
 	<p>The method begins by creating a gel; the gel is made with water and agarose tablets that are dissolved into a solution. The solution is then heated and stirred repeatedly and set to solidify in the buffer chamber. After we prepared our gel, we let it solidify for roughly ten minutes and prepared to load the DNA samples by pouring the buffer and connecting the free electrode wires to the chamber. We also had a ladder that was loaded into the first well. A ladder is a sort of control for the DNA samples because it has many different sized DNA molecules that move different distances down the gel. If the ladder does not work, it means there is something wrong with how the gel was set up. Finally we could load our own DNA into the different wells, using a different pipette tip for each sample we loaded. Afterwards, we left for break and waited for the sample results to arrive.</p>
+
+ <!-- Image 6-11 -->
+
+	<h3>Results & Evidence</h3>
+	<p>	After break, we came back to find pictures of our gel electrophoresis results; they were illuminated, so we could see them clearly. It was easy to tell that the molecules farther down the gel were smaller than the ones closer, but we had to actually find out how long our specific genes were in base pairs. To accomplish this, we used the ruler tool in adobe photoshop to find the number of pixels from our wells to the band(s). We then plugged the number of pixels into a google sheets equation to find out roughly how many base pairs the pixels equaled (a lower number of pixels would equal more base pairs). Now we had specific data to compare with other people in the grade. All of our base pair data was compiled into one large google sheet document, and we could compare the grade’s data with the year before. The google sheet compared the number of base pairs in each student’s VNTR length and their U.S. government assigned race with the data from other students. The sheet also looked for matches in length with other students and gave a percentage as to how many other student matches were the same assigned race versus different.</p>
+
+ <!-- Image 12 -->
+ <!-- Image 13+14 -->
+
+    <p>The 2023-2024 data (from the year prior) found that 5.1% of students matched with at least one person of the same “race,” while 7% of students matched with at least one person of a different “race” (there was an 87.9% chance of not having any matches). There are eight different U.S. government categories for race. Then, in the 2024-2025 results (this year), we had similar results. 13.5% of students matched with someone outside their race, while 8.7% of students matched within their race. In an even larger difference, there were 251 total matches between people of different races and only 61 total matches between people of the same race. Again, it was shown to be more likely to be matched with a different “race” than the same “race.”</p>
+    <p>In a map of skin type, blood type, and sickle cell disease, there was a lot of information gained on how people who live in an area can be categorized as a “race.” The skin color map shows that people who live closer to the equator have darker skin, while people closer to the poles have lighter skin. The map was a gradient though, and a lot of people had a similar shade but were in opposite areas. It is likely that skin color has to do with how warm it is in the area, because the chemical is produced  to protect against UV damage from the sun. In the blood type and sickle cell maps, there seemed to be very little correlation between the location and the blood type.</p>
+
+ <!-- Image 15 -->
+
+ 	<h3>Reasoning– Why isn’t Race Real? (Genetic)</h3>
+
+ 	<p>While the social construct of race does exist, we have observed here that biological race does not exist. For one, the genetics experiments from both this year and last year have yielded the same result, that having a biological match in DNA on the VNTR gene is just as if not more likely to happen with someone of a different “race” than someone of a different “race.” While exact results have varied, it is undeniable that a DNA match with someone has nothing to do with an assigned “race,” and therefore the idea that one trait in common equals many traits in common is false. If biological race was real, we would have observed a much higher number of matches within a race in our experiment, and we would have observed a very small number of matches outside of a race. Because we got the results that we did, the prospect of biological race must be false.</p>
+
+	<h3>Psychological Race Investigation</h3>
+
+	<p>	In New Media and Tech, we also conducted a shorter investigation into how people might view race as real, making it true from a psychological and social standpoint. For a concept to exist socially, a relatively large and interactive group of people have to agree/believe that it exists. If race is socially real, it must be acknowledged by society as something that exists. For a concept to exist psychologically, people must believe or have underlying thoughts of it existing. For race to be psychologically real, at least someone must have some subconscious or blatant idea of race existing. Based on data collected from two separate situations, race is socially and psychologically real.</p>
+
+	<h3>Implicit Bias and the IAT</h3>
+
+	<p>Implicit bias is the subconscious prejudice, ideas, and attitudes we feel about certain things, and there is a well known test for measuring it on a scale. The Implicit Association Test, or IAT, is a reaction time measure that gives a sense of the general subconscious biases someone may have. The test measures how quickly the participant can sort various pictures and words together, and the sorting speed is how closely the participant sorts the two concepts. The test begins by having the participant sort photos into two separate groups; for example,  sorting people with dark skin and light skin. Then, the participant sorts words into two separate groups, such as “good” words and “bad” words. Next, the participant begins to sort both the words and the pictures at the same time, but there is a twist. On one run, the participant has to sort “good” words and darker skin on the same key, and on the other they sort “good” words and lighter skin on the same key. Finally, a measure of how long it takes for “lighter skin” and “good” on average to be clicked is compared to how long it takes for “darker skin” and “good” to be clicked. The difference between the two numbers is called “The IAT Effect.” The test is not necessarily measuring how someone feels (whether or not they are racist), but it is measuring how much racism or bias or prejudice at all they are exposed to, and how it has affected them subconsciously. Most people have a bias related to race, according to IAT data. 71% of participants associate black people with weapons, and 61% associate people with Asian heritage to “foreign” things.</p>
+
+	<h3>An Elementary School Experiment</h3>
+
+	<p>	In an elementary school class a teacher created an experiment in which she treated students with blue eyes as superior to those with brown eyes. The test was meant to represent racism in society, and how people were judged off of a physical trait. The students, who had previously been a relatively controlled class, immediately began to become full of disputes between the different groups; fights started breaking out and blue eyed students began making up and spreading untrue rumors about why brown eyed people were bad. All the teacher did was say one eye color was better and make the “worse” eye color wear a collar to make it more obvious. On the second day of the experiment, the teacher turned the tables by saying that actually, the brown eyed students were better. In response, the blue eyed students began to act more disruptive than the day before and the brown eyed students decided that they were smarter than the other group.</p>
+
+	<h3>Reasoning– Why is Race Real? (Social)</h3>
+
+	<p>	Race must exist socially and psychologically, because bias based on “race” exists. People make judgements and have prejudices based on their ideas of race, as seen with the results of the IAT; therefore, race must exist in society and in the mind of people. In the class experiment, after the teacher made one eye color “better,” students began acting as if a superior eye color was real, whether or not it was factual. All the students needed was an idea to be planted, and they immediately had both a social and psychological change in behavior according to the eye color of their peers. The same results are likely true on a large scale, such as race; once “race” is stated as factual to someone, it spreads and becomes a bias in society. “Race” became a factor in society, so whether or not it exists, it is still treated as if it is real. If race was not socially or psychologically, the students in the test would not have treated anyone differently, and the IAT would never show any bias in tests. Race must exist from a social and psychological standpoint.</p>
+
+	<h3>Exclusive Documentary– An Initial Interview</h3>
+
+ <!-- Video 1 -->
+
+	<h3>Unit 3: 21st Century Skills and Contributions</h3>
+
+	<p>	During the biodiversity unit, I contributed to the process by filming the PCR and Gel Electrophoresis experiments, acting as the “expert” during the initial interview filming, and showing my groupmates how to analyze the gel electrophoresis data. I improved my 21st Century Skill Accessing and Analyzing Information through my work with the construction of three different CER essays about the project. I used research tools when learning about biological race and combined information from different experiments to create well reasoned explanations as to how race was not real biologically, and yet real from a societal standpoint. While creating my documentary, I had to use correct information and ideas so that my video was interesting and created a sufficient buildup to later videos. Unit 3 taught me the importance of combining self tested experiments with credible sources to create a solid argument that can withstand many levels of criticism. During the experiment, I learned how to use micropipettes to pick up and drop liquids, and I also learned how to edit on Adobe premiere pro while making my documentary and another initial interview.</p>
+
+ <!-- Image 16+17 -->
+ <!-- Video 2 -->
+
 
     </body>
 </html>

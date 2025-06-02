@@ -15,6 +15,16 @@ def blackbox(request):
 def aboutme(request):
     return render(request, "core/index.html")
 
+def biotech(request):
+    return render(request, "core/biotech.html")
+
+def biograph(request):
+    return render(request, "core/biograph.html")
+
+def music(request):
+    return render(request, "core/music.html")
+
+
 
 
 
