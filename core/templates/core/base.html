@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sam Werlin">
+    <title>{% block title %}Sam Werlin's ePortfolio{% endblock %}</title>
+
+    {% block favicon %}
+        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
+    {% endblock %}
+
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block nav %}
+    <nav id="main-nav-bar">
+        <ul>
+            <h3> <a href="{% url 'about_page' %}">Sam Werlin's ePortfolio</a> |
+            <a href="{% url 'skill_page' 'problem-solving' %}">Problem Solving and Critical Thinking</a> |
+            <a href="{% url 'skill_page' 'analyzing-info' %}">Accessing and Analyzing Information</a> |
+            <a href="{% url 'skill_page' 'communication' %}">Communication and Collaboration</a> |
+            <a href="{% url 'skill_page' 'creativity' %}">Creativity and Innovation</a> |
+            <a href="{% url 'skill_page' 'initiative' %}">Initiative, Self-Direction, and Accountability</a> |
+            <a href="{% url 'skill_page' 'citizenship' %}">Citizenship and Responsibility</a> </h3>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+           <h3> <a href="https://creativecommons.org">Eportfolio</a> © 2025 by <a href="https://creativecommons.org">Sam Werlin</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"> </h3>
+        {% endblock %}
+    </footer>
+
+</body>
+</html>

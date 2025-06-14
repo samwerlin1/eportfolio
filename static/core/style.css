@@ -21,6 +21,9 @@ tr:hover {background-color: #d18efa;}
   flex-wrap: wrap;
   background-color: #d18efa;
   width: 750px;
+  color: #000066;
+  font-family: Bebas Neue;
+  text-shadow:0 0 10px #009999;
 }
 .flex-container > div {
   background-color: #ccccff;
@@ -29,6 +32,9 @@ tr:hover {background-color: #d18efa;}
   text-align: center;
   line-height: 75px;
   font-size: 30px;
+  color: #000066;
+  font-family: Bebas Neue;
+  text-shadow:0 0 10px #009999;
 }
 
 .flex-container img {
@@ -125,7 +131,8 @@ table, th, td {
 nav {
   display: block;
   color: #000066;
-	font-family: Bebas Neue;
+  font-family: Bebas Neue;
+  text-shadow:0 0 10px #009999;
 }
 
 

@@ -1,45 +1,8 @@
+{% extends "core/base.html" %}
+
 {% load static %}
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Black Box | Sam Werlin</title>
-    <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
-    <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
-<link rel="stylesheet" href="{% static 'core/style.css' %}">
-
-<style>
-
-</style>
-
-
-  </head>
-  <body>
-
-
-
-<nav>
-
-<ul>
-
-<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
-<a href="screenprint">Screenprint Project</a> |
-<a href="biotech">Biotechnology Unit</a> |
-<a href="biograph">Augmented Biography</a> |
-<a href="music">Track and Field</a>
-</ul>
-</nav>
-
-
-
-
-
-
+{% block content %}
 
 <h1>The Black Box Investigation</h1>
 <h2>By Sam Werlin</h2>
@@ -218,7 +181,8 @@ width=250>
 <p>During the Blackbox Investigation, I developed my Community and Collaboration skills, which happens to be a 21st Century Competency. By doing this project, I learned how to communicate effectively, as well as work productively with others through the physical step. We had to communicate well to make a working prototype, and at first the building was rough, but after managing to talk through our problems, my group was able to create a plan. This plan brought my group and I together to the point where we were able to work productively and create a model, which although did not fully work, still was a large achievement that highlighted our communication and problem solving skills as a team. I also demonstrated being able to articulate and explain ideas through models to audiences. This was through explaining my plan for the blackbox model to both my team and my class that showed how our prototype would work.
 </p>
 
-  </body>
-</html>
-
-
+    <!--Insert your about me page code here-->
+    <!--You don't need a nav bar, footer, or the HTML boilerplate code as that
+       will all come from the base template.  You could choose to "overwrite"
+       those if you want though.  Ask Mr. S. for help if you want to.-->
+{% endblock %}

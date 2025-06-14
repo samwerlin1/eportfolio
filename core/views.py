@@ -1,32 +1,39 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-import datetime
+from django.shortcuts import render, get_object_or_404
+from django.http import Http404
+from .models import Page
 
-def hellotime(request):
-    now = datetime.datetime.now()
-    return HttpResponse(f"<h1>Hello, world!</h1><p>It's {now}</p>")
+def page_detail_view(request, slug):
+    # This function gets project/experience pages (or other custom portfolio pages)
+    # All of these pages need to have an associated "page" data object in the Django models/database
+    page = get_object_or_404(Page, slug=slug)
 
-def screenprint(request):
-    return render(request, "core/screenprint.html")
+    context = {'page': page}  # Data about the page from the Django model/database
 
-def blackbox(request):
-    return render(request, "core/blackbox.html")
+    if page.html_filename:
+        # If the page object defines a specific html file to use from templates, just use that
+        template_name = f'core/{page.html_filename}'
+    else: # Otherwise, look for defined components and build the page from those
+        template_name = 'core/components.html'
 
-def aboutme(request):
-    return render(request, "core/index.html")
+    return render(request, template_name, context)
 
-def biotech(request):
-    return render(request, "core/biotech.html")
+def skill_page_view(request, skill_slug):
+    skill_labels = {slug: label for slug, label in Page.Skill.choices}
+    # This is making the skill names look-up-able from their slugs
+    skill_label = skill_labels.get(skill_slug)
 
-def biograph(request):
-    return render(request, "core/biograph.html")
+    if not skill_label:
+        raise Http404('No "21st Century Skill" exists at that location.')
 
-def music(request):
-    return render(request, "core/music.html")
+    pages_with_skill = Page.objects.filter(skill=skill_slug)  # Finds all pages with matching 21st Century Skill
 
+    context = { # Data about the skill name and all the pages tagged with it
+        'skill_label': skill_label,
+        'pages': pages_with_skill,
+    }
 
+    return render(request, 'core/skill.html', context)
 
-
-
-# Create your views here.
-# best site ever
+def about_view(request):
+    # This is the home page for your eportfolio, which requires code in the about.html file in templates
+    return render(request, 'core/about.html')

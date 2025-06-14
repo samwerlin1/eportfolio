@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ skill_label }}{% endblock %}
+
+{% block content %}
+    <h1>{{ skill_label }}</h1>
+
+    {% if pages %}
+        <div>
+            {% for page in pages %}
+                <div class="page-card">
+                    <a href="{% url 'page_detail' slug=page.slug %}">
+                        <h3>{{ page.title }}</h3>
+                    </a>
+                            {{ page.thumbnail }}
+
+                    <!--
+                        Thumbnail Images?  Grade? Subject?
+                        What else do you want to include/display?
+                        How do you want to display it?
+                        Do you want to change this to an unordered list?
+                        Or will you use clickable card "divs" in a flexbox container?
+                    -->
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2>Coming soon!</h2>
+        <p>(No pages exist for this skill yet.) </p>
+    {% endif %}
+
+{% endblock %}

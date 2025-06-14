@@ -1,0 +1,107 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+    <h1 class="page-title">{{ page.title }}</h1>
+
+    {% if page.thumbnail %}
+        <img class="thumbnail" src="{{ page.thumbnail.url }}" alt="{{ page.title }}">
+    {% endif %}
+
+    {% for component in page.components.all %}
+
+        {# --- Flexbox Row Begin --- #}
+        {# This opens a flex container at the beginning of a sequence of inline components. #}
+        {% if component.inline and not forloop.previtem.inline %}
+            <div class="component-row" style="display: flex; flex-wrap: wrap; margin-left: -0.5%; margin-right: -0.5%;">
+        {% endif %}
+
+
+        {# --- Component Wrapper --- #}
+        {# Every component gets a wrapper. For inline items, this wrapper becomes the flex item. #}
+        <div {% if component.inline %}
+                 style="width: {{ component.width | default:'auto' }}; padding-left: 0.5%; padding-right: 0.5%; box-sizing: border-box;"
+             {% else %}
+                 style="width: {{ component.width | default:'100%' }}; margin-left: auto; margin-right: auto;"
+             {% endif %}>
+
+            {# --- HEADING --- #}
+            {% if component.category == 'H' %}
+                <h2 class="heading">{{ component.text }}</h2>
+
+            {# --- SUBHEADING --- #}
+            {% elif component.category == 'S' %}
+                <h3 class="subheading">{{ component.text }}</h3>
+
+            {# --- PARAGRAPH --- #}
+            {% elif component.category == 'P' %}
+                <p class="paragraph">{{ component.text }}</p>
+
+            {# --- LINK --- #}
+            {% elif component.category == 'A' %}
+                <p class="link-wrapper">
+                    <a class="link" href="{{ component.url }}">{{ component.text|default:component.url }}</a>
+                </p>
+
+            {# --- IMAGE --- #}
+            {% elif component.category == 'I' %}
+                {% if component.file %}
+                    <img class="image" src="{{ component.file.url }}" alt="{{ component.text }}">
+                {% endif %}
+
+            {# --- GROUPIMAGEBEGIN --- #}
+            {% elif component.category == 'B' %}
+                {% if component.file %}
+                     <figure><div class="flex-container">
+                      <div><img class="image" src="{{ component.file.url }}" alt="{{ component.text }}"></div>
+                {% endif %}
+
+            {# --- GROUPIMAGEEND --- #}
+            {% elif component.category == 'E' %}
+                {% if component.file %}
+                      <div><img class="image" src="{{ component.file.url }}" alt="{{ component.text }}"></div>
+                      </div>
+                    </figure>
+                {% endif %}
+
+            {# --- YOUTUBE VIDEO --- #}
+            {% elif component.category == 'Y' %}
+                {# This wrapper creates a responsive container for the iframe that doesn't mess up the aspect ratio. #}
+                <div class="youtube-responsive-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe class="youtube"
+                            src="{{ component.youtube_embed_url }}"
+                            title="{{ component.text }}"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+            {# --- DOWNLOADABLE FILE --- #}
+            {% elif component.category == 'D' %}
+                {% if component.file %}
+                    <p class="download-wrapper">
+                        <a class="download-link" href="{{ component.file.url }}" download>{{ component.text|default:"Download File" }}</a>
+                    </p>
+                {% endif %}
+
+            {# --- RAW HTML --- #}
+            {% elif component.category == 'R' %}
+                {{ component.text|safe }}
+            {% endif %}
+
+        </div>
+        {# --- End of Component Wrapper --- #}
+
+
+        {# --- Flexbox Row End --- #}
+        {# This closes the flex container at the end of a sequence of inline components. #}
+        {% if component.inline and not forloop.nextitem.inline or forloop.last and component.inline %}
+            </div>
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

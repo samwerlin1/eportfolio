@@ -1,37 +1,8 @@
+{% extends "core/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang=en>
-    <head>
-        <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="author" content="Sam Werlin">
-
-        <title>Track and Field | Sam Werlin</title>
-
-        <link rel="stylesheet" href="{% static 'core/style.css' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
-    </head>
-
-    <body>
-
-
-<nav>
-
-<ul>
-
-<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
-<a href="blackbox">The Blackbox</a> |
-<a href="screenprint">Screenprint Project</a> |
-<a href="biotech">Biotechnology Unit</a> |
-<a href="biograph">Augmented Biography</a>
-
-</ul>
-</nav>
-
-
+{% block content %}
 
     <h1>Track and Field</h1>
     <h2>By Sam Werlin</h2>
@@ -85,6 +56,4 @@
 
 	<h3>21st Century Skills</h3>
 	<p>Throughout this year of running track, I have enhanced my 21st Century Skill: Initiative, Self-Direction and Accountability. By running with a team, I have taken responsibility for my own practice and I have gotten faster with the effort I have put in. I have also made goal times for myself to meet, and I have managed the amount of time in the season effectively in order to reach my goals. Except for when I take strategic breaks, I am constantly practicing so that I will be more ready for the next track meet. </p>
-
-    </body>
-</html>
+{% endblock %}

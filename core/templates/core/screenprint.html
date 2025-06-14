@@ -1,37 +1,8 @@
+{% extends "core/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang=en>
-    <head>
-        <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="author" content="Sam Werlin">
-
-        <title>Screenprint Project | Sam Werlin</title>
-
-        <link rel="stylesheet" href="{% static 'core/style.css' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
-    </head>
-
-    <body>
-
-
-<nav>
-
-<ul>
-
-<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
-<a href="blackbox">The Blackbox</a> |
-<a href="biotech">Biotechnology Unit</a> |
-<a href="biograph">Augmented Biography</a> |
-<a href="music">Track and Field</a>
-
-</ul>
-</nav>
-
-
+{% block content %}
 
         <h1>Screenprinting Project</h1>
         <h2>By Sam Werlin</h2>
@@ -179,6 +150,4 @@ alt="photoshop"></div>
 	<h3>Our Shared Canvas: 21st Century Skills</h3>
 	      <p>During this screenprinting project, I grew through increasing my understanding of one of the five 21st Century Competency skills necessary to graduate. That skill was Problem Solving and Critical Thinking, a skill that was easily reflected throughout this project, and one that was vital to the completion of a screenprint. This skill was learned through reasoning effectively, making insightful decisions, and problem solving. My effective reasoning was grown through using logic to create my screenprint design (it was based on my favorite hobbies, as well as who I wanted my print’s audience to be). My decisions were made more insightful by using feedback from friends and the fact that I could not make my screenprint three layers to make my design simpler and more fleshed out in photoshop. Finally, I became better at handling and solving problems by experiencing them while I printed the design on surfaces. This includes when I needed to make up work after failing to complete my first paint layer and I managed to start my design in thirty minutes and when I used light to find the right spot to print the second layer of the design.</p>
 
-
-    </body>
-</html>
+{% endblock %}

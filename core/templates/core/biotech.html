@@ -1,66 +1,8 @@
+{% extends "core/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<!--
-    Anything you put in between the double-dash arrow symbols shown around
-    this block of text is designated a 'comment' intended for human coders
-    and ignored by the computer. The top "<!DOCTYPE html>" line of code
-    declares that this text file is to be interpreted as HTML code.
--->
 
-<html lang=en>
-<!--
-    This opening tag marks the start of the html code.  Everything below
-    until the </html> closing tag is part of this element. "lang" is an
-    attribute defining the language of the website. The value "en"
-    indicates this site is written in English. We indent the content
-    inside an element to make it easier for people to read and understand.
--->
-
-    <head>
-    <!--Code about the website NOT displayed in the browser window.-->
-
-        <meta charset="UTF-8"> <!--Sets site to use standard characters.-->
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Sizes your site to the visitor's screen size -->
-
-        <meta name="author" content="Sam Werlin">
-        <!--
-            Some tags like "meta" are self-closing. They have "attributes"
-            but no inner content and they don't need or use a closing tag.
-        -->
-
-        <title>Biotechnology | Sam Werlin</title>
-        <!--The 'title' is what's displayed in the browser tab.-->
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
-
-        <link rel="stylesheet" href="{% static 'core/style.css' %}">
-        <!--
-            HTML (HyperText Markup Language) code is for the website
-            content. CSS (Cascading Style Sheets) code is for the website
-            style. The line above tells the browser the file location and
-            file name to find this code that you'll write/edit there.
-        -->
-
-
-    </head>
-
-    <body> <!--Everything to be displayed in the browser window.-->
-
-
-<nav>
-
-<ul>
-<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
-<a href="blackbox">The Blackbox</a> |
-<a href="screenprint">Screenprint Project</a> |
-<a href="biograph">Augmented Biography</a> |
-<a href="music">Track and Field</a>
-</ul>
-</nav>
-
-
+{% block content %}
 
         <h1>Biotechnology Unit</h1>
 	<h2>By Sam Werlin</h2>
@@ -190,6 +132,4 @@ alt="results"></div>
  <!-- Video 2 -->
  <iframe width="789" height="444" src="https://www.youtube.com/embed/MsXsSZ0Q7mc" title="Stop Motion with Pipettes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-    </body>
-</html>
+{% endblock %}

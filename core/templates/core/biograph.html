@@ -1,36 +1,8 @@
+{% extends "core/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang=en>
-    <head>
-        <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="author" content="Sam Werlin">
-
-        <title>Augemented Biography | Sam Werlin</title>
-
-        <link rel="stylesheet" href="{% static 'core/style.css' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-48.png' %}">
-        <link rel="icon" type="image/png" href="{% static 'core/favicon-16.png' %}">
-    </head>
-
-    <body>
-
-
-<nav>
-
-<ul>
-
-<a href="https://samwerlin1.pythonanywhere.com/">About Me</a> |
-<a href="blackbox">The Blackbox</a> |
-<a href="screenprint">Screenprint Project</a> |
-<a href="biotech">Biotechnology Unit</a> |
-<a href="music">Track and Field</a>
-
-</ul>
-</nav>
-
+{% block content %}
 
 
         <h1>Augmented Biography</h1>
@@ -90,6 +62,4 @@ alt="sikorsky"></div>
 	<p>	Over the course of this project, I have enhanced the Capstone 21st Century Skill, Creativity and Innovation; I have practiced originality and inventiveness in writing my biography, building my puppet, and animating through motion capture. When I built the puppet, I had to use my creative talents to draw a puppet that looked similar to the historical figure I was basing it off of. When I rigged the puppet in Character Animator, I also had to be innovative and use my inventiveness to fix the problems that occurred as I tried to set the puppet up for motion capture.</p>
 
 
-
-    </body>
-</html>
+{% endblock %}
